@@ -25,24 +25,24 @@ export function BenefitsSection() {
       className="border-b border-slate-200/60 bg-slate-50/50 py-14 sm:py-16 md:py-24"
       aria-labelledby="benefici-heading"
     >
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5">
         <Reveal>
           <h2
             id="benefici-heading"
-            className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl"
+            className="text-balance text-[1.375rem] font-semibold leading-snug tracking-tight text-slate-900 sm:text-2xl sm:leading-tight md:text-3xl"
           >
             Quando tutto sta nello stesso posto
           </h2>
         </Reveal>
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2">
+        <ul className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-4">
           {blocks.map((block) => (
             <li key={block.title}>
               <Reveal className="h-full">
-                <article className="h-full rounded-[12px] border border-slate-200/90 bg-white p-5 shadow-sm shadow-slate-900/[0.035] transition-[box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-900/[0.06]">
-                  <h3 className="text-sm font-semibold text-slate-900">
+                <article className="flex h-full min-h-0 flex-col rounded-[12px] border border-slate-200/90 bg-white p-6 shadow-sm shadow-slate-900/[0.035] transition-[box-shadow,transform] duration-200 sm:p-5 hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-900/[0.06]">
+                  <h3 className="text-base font-semibold leading-snug text-slate-900 sm:text-sm">
                     {block.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  <p className="mt-3 text-[0.9375rem] leading-relaxed text-slate-600 sm:mt-2 sm:text-sm">
                     {block.body}
                   </p>
                 </article>

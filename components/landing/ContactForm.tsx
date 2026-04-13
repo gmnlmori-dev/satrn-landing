@@ -79,7 +79,8 @@ export function ContactForm() {
 
   const inputErrorClass = "border-rose-300/90 ring-1 ring-rose-200/60 focus:border-rose-400 focus:ring-rose-500/20";
 
-  const labelClass = "mb-2 block text-sm font-medium text-slate-600 md:mb-1.5 md:text-xs";
+  const labelClass =
+    "mb-2.5 block text-[0.9375rem] font-medium text-slate-600 md:mb-1.5 md:text-xs";
 
   return (
     <form
@@ -87,7 +88,7 @@ export function ContactForm() {
       method="POST"
       action={FORMSPREE_ACTION}
       onSubmit={handleSubmit}
-      className="space-y-5 sm:space-y-4"
+      className="space-y-6 sm:space-y-4"
       noValidate
       aria-describedby={status === "success" ? "contact-form-success" : undefined}
     >
