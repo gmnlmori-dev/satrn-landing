@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { resolveSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,20 +13,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = resolveSiteUrl();
+
+const titleDefault =
+  "Satrn — Centralizza richieste, follow-up e processi operativi";
+
+const description =
+  "Satrn aiuta agenzie, studi e società di servizi a centralizzare richieste, follow-up e attività in un unico sistema ordinato e tracciabile.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Satrn — Sistema operativo per flussi operativi dispersi",
+    default: titleDefault,
     template: "%s · Satrn",
   },
-  description:
-    "Richieste, follow-up e operatività in un solo sistema. Per agenzie, studi e società di servizi.",
-  metadataBase: new URL("https://satrn.tech"),
+  description,
+  applicationName: "Satrn",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Satrn — Sistema operativo per flussi operativi dispersi",
-    description:
-      "Richieste, follow-up e operatività in un solo sistema.",
+    title: titleDefault,
+    description,
+    url: "/",
+    siteName: "Satrn",
     locale: "it_IT",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: titleDefault,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
