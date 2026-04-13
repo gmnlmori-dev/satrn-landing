@@ -22,7 +22,7 @@ const blocks = [
 export function BenefitsSection() {
   return (
     <section
-      className="border-b border-slate-200/60 bg-slate-50/50 py-16 md:py-24"
+      className="border-b border-slate-200/60 bg-slate-50/50 py-14 sm:py-16 md:py-24"
       aria-labelledby="benefici-heading"
     >
       <div className="mx-auto max-w-6xl px-4">

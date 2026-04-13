@@ -19,7 +19,7 @@ export function HowItWorksSection() {
   return (
     <section
       id="come-funziona"
-      className="border-b border-slate-200/60 bg-white py-16 md:py-24"
+      className="scroll-mt-24 border-b border-slate-200/60 bg-white py-14 sm:py-16 md:py-24"
       aria-labelledby="come-funziona-heading"
     >
       <div className="mx-auto max-w-6xl px-4">

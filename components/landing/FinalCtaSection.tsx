@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/landing/ContactForm";
 import { Reveal } from "@/components/landing/Reveal";
-import { DEMO_MAILTO } from "@/lib/constants";
+import { CONTACT_SECTION_HASH } from "@/lib/constants";
 
 export function FinalCtaSection() {
   return (
     <section
       id="contatti"
-      className="bg-white py-16 md:py-24"
+      className="scroll-mt-24 bg-white py-14 sm:py-16 md:py-24"
       aria-labelledby="contatti-heading"
     >
       <div className="mx-auto max-w-6xl px-4">
         <Reveal>
-          <div className="rounded-[14px] border border-slate-200/90 bg-gradient-to-br from-slate-50 via-white to-blue-50/40 px-6 py-12 shadow-sm shadow-slate-900/[0.05] sm:px-10 md:px-14 md:py-16">
-            <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-14 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]">
+          <div className="rounded-[14px] border border-slate-200/90 bg-gradient-to-br from-slate-50 via-white to-blue-50/40 px-4 py-10 shadow-sm shadow-slate-900/[0.05] sm:px-8 sm:py-12 md:px-14 md:py-16">
+            <div className="grid gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-14 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]">
               <div>
                 <h2
                   id="contatti-heading"
@@ -27,9 +27,9 @@ export function FinalCtaSection() {
                 </p>
                 <div className="mt-8">
                   <Button
-                    href={DEMO_MAILTO}
+                    href={CONTACT_SECTION_HASH}
                     variant="primary"
-                    className="min-w-[12rem] px-6"
+                    className="w-full justify-center px-6 sm:w-auto sm:min-w-[12rem]"
                   >
                     Richiedi una demo
                   </Button>
@@ -39,12 +39,12 @@ export function FinalCtaSection() {
                 </p>
               </div>
 
-              <div className="border-t border-slate-200/80 pt-10 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0 xl:pl-12">
+              <div className="border-t border-slate-200/80 pt-8 sm:pt-10 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0 xl:pl-12">
                 <p className="text-pretty text-sm leading-relaxed text-slate-600">
                   Raccontami come gestisci oggi richieste, follow-up e attività.
                   Ti mostro se Satrn può aiutarti a centralizzare il flusso.
                 </p>
-                <div className="mt-6 rounded-[12px] border border-slate-200/90 bg-white/90 p-5 shadow-sm shadow-slate-900/[0.04] sm:p-6">
+                <div className="mt-5 rounded-[12px] border border-slate-200/90 bg-white/90 p-4 shadow-sm shadow-slate-900/[0.04] sm:mt-6 sm:p-6">
                   <ContactForm />
                 </div>
               </div>

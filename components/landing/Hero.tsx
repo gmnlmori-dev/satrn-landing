@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/Button";
-import { DEMO_MAILTO } from "@/lib/constants";
+import { CONTACT_SECTION_HASH } from "@/lib/constants";
 import { HeroMockup } from "@/components/landing/HeroMockup";
 
 export function Hero() {
@@ -8,7 +8,7 @@ export function Hero() {
       className="relative overflow-hidden border-b border-slate-200/60 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(37,99,235,0.07),transparent)]"
       aria-labelledby="hero-heading"
     >
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 md:grid-cols-2 md:items-center md:gap-10 md:py-24 lg:gap-16">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:gap-12 sm:py-16 md:grid-cols-2 md:items-center md:gap-10 md:py-24 lg:gap-16">
         <div className="max-w-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700/90">
             Sistema operativo per flussi operativi dispersi
@@ -23,11 +23,19 @@ export function Hero() {
             Per agenzie, studi e società di servizi che oggi spostano il lavoro
             tra email, fogli, chat e passaggi fatti a mano.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-            <Button href={DEMO_MAILTO} variant="primary" className="min-w-[11rem]">
+          <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center">
+            <Button
+              href={CONTACT_SECTION_HASH}
+              variant="primary"
+              className="w-full justify-center sm:w-auto sm:min-w-[11rem]"
+            >
               Richiedi una demo
             </Button>
-            <Button href="#come-funziona" variant="secondary" className="min-w-[11rem]">
+            <Button
+              href="#come-funziona"
+              variant="secondary"
+              className="w-full justify-center sm:w-auto sm:min-w-[11rem]"
+            >
               Scopri come funziona
             </Button>
           </div>

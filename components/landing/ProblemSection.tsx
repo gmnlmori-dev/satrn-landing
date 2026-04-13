@@ -23,7 +23,7 @@ export function ProblemSection() {
   return (
     <section
       id="problema"
-      className="border-b border-slate-200/60 bg-white py-16 md:py-24"
+      className="scroll-mt-24 border-b border-slate-200/60 bg-white py-14 sm:py-16 md:py-24"
       aria-labelledby="problema-heading"
     >
       <div className="mx-auto max-w-6xl px-4">

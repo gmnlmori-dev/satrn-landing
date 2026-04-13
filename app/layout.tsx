@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { resolveSiteUrl } from "@/lib/site";
 import "./globals.css";
@@ -20,6 +20,13 @@ const titleDefault =
 
 const description =
   "Satrn aiuta agenzie, studi e società di servizi a centralizzare richieste, follow-up e attività in un unico sistema ordinato e tracciabile.";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#f8fafc",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -58,7 +65,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-full antialiased pb-[env(safe-area-inset-bottom,0px)]">
+        {children}
+      </body>
     </html>
   );
 }

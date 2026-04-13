@@ -24,7 +24,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="transition-colors hover:text-slate-900"
+                    className="-mx-1 inline-flex min-h-11 items-center rounded-md px-1 py-2 text-[0.9375rem] transition-colors hover:text-slate-900 active:bg-slate-100/80 sm:min-h-0 sm:py-0"
                   >
                     {link.label}
                   </a>
@@ -38,7 +38,7 @@ export function Footer() {
             </p>
             <a
               href="mailto:hello@satrn.tech"
-              className="mt-1 inline-block text-sm font-medium text-slate-800 transition-colors hover:text-blue-700"
+              className="mt-2 inline-flex min-h-11 items-center text-base font-medium text-slate-800 transition-colors hover:text-blue-700 sm:mt-1 sm:min-h-0 sm:text-sm"
             >
               hello@satrn.tech
             </a>
